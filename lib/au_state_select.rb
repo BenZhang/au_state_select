@@ -59,4 +59,4 @@ module ActionView
   end
 end
 
-require 'au_state_select/railtie' if defined?(Rails)
+require 'au_state_select/railtie' if defined?(Rails) and defined?(SimpleForm)
