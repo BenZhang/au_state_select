@@ -1,12 +1,12 @@
 # AuStateSelect
 
-TODO: Write a gem description
+Provides a simple helper to get an HTML select list of Austraila states. Compatable with Rails 3 & 4.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'au_state_select'
+    gem 'au_state_select', '~> 1.0'
 
 And then execute:
 
