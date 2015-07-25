@@ -28,7 +28,13 @@ module AUStateSelect
         states += options_for_select(priority_states, selected)
         states += "<option value=\"\" disabled=\"disabled\">-------------</option>\n"
       end
-      states = states + options_for_select([['Australian Capital Territory', 'ACT'],['New South Wales', 'NSW'],['Northern Territory', 'NT'],['Queensland', 'QLD'],['South Australia', 'SA'],['Tasmania', 'TAS'],['Victoria', 'VIC'],['Western Australia', 'WA']], selected)
+
+      select_options = if options.key?(:short_name) and options[:short_name]
+        ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA']
+      else
+        [['Australian Capital Territory', 'ACT'],['New South Wales', 'NSW'],['Northern Territory', 'NT'],['Queensland', 'QLD'],['South Australia', 'SA'],['Tasmania', 'TAS'],['Victoria', 'VIC'],['Western Australia', 'WA']]
+      end
+      states = states + options_for_select(select_options, selected)
 
       html_options = html_options.stringify_keys
       add_default_name_and_id(html_options)
