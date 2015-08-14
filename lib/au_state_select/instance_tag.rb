@@ -9,7 +9,6 @@ module AUStateSelect
       state_select(priority_states, options, html_options)
     end
 
-    # Adapted from Rails country_select. Just uses country codes instead of full names.
     def state_select(priority_states, options, html_options)
       selected = object.send(@method_name) if object.respond_to?(@method_name)
 
