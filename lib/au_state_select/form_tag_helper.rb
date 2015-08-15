@@ -22,7 +22,9 @@ module AUStateSelect
 
       html_options = html_options.stringify_keys
 
-      content_tag(:select, states.html_safe, { "name" => name, "id" => sanitize_to_id(name) }.update(html_options.stringify_keys))
+      attribute_id = options[:id] || name
+
+      content_tag(:select, states.html_safe, { "name" => name, "id" => sanitize_to_id(attribute_id) }.update(html_options.stringify_keys))
     end
   end
 end
