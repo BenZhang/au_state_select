@@ -6,7 +6,7 @@ Provides a simple helper to get an HTML select list of Austraila states. Compata
 
 Add this line to your application's Gemfile:
 
-    gem 'au_state_select', '~> 1.0'
+    gem 'au_state_select', '~> 1.4'
 
 And then execute:
 

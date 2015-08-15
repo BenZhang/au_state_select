@@ -1,6 +1,6 @@
 module AUStateSelect
   module FormTagHelper
-    def state_select_tag(name, priority_countries = nil, options = {}, html_options = {})
+    def state_select_tag(name, options = {}, html_options = {})
 
       states = ""
 
