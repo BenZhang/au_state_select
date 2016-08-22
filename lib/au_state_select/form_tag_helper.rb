@@ -18,7 +18,12 @@ module AUStateSelect
       else
         [['Australian Capital Territory', 'ACT'],['New South Wales', 'NSW'],['Northern Territory', 'NT'],['Queensland', 'QLD'],['South Australia', 'SA'],['Tasmania', 'TAS'],['Victoria', 'VIC'],['Western Australia', 'WA']]
       end
-      states = states + options_for_select(select_options)
+
+      if options.key?(:value) and options[:value]
+        states = states + options_for_select(select_options, options[:value])
+      else
+        states = states + options_for_select(select_options)
+      end
 
       html_options = html_options.stringify_keys
 

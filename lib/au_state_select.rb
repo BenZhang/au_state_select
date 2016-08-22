@@ -8,7 +8,7 @@ ActionView::Base.send(:include, AUStateSelect::FormHelpers)
 ActionView::Base.send(:include, AUStateSelect::FormTagHelper)
 
 if Rails::VERSION::MAJOR >= 4
-  ActionView::Helpers::ActiveModelInstanceTag.send(:include, AUStateSelect::InstanceTag)
+  ActionView::Helpers::Tags::Select.send(:include, AUStateSelect::InstanceTag)
 else
   ActionView::Helpers::InstanceTag.send(:include, AUStateSelect::InstanceTag)
 end
