@@ -20,7 +20,7 @@ module AUStateSelect
         elsif options[:prompt].present?
           option = options[:prompt] == true ? "Please Select" : options[:prompt]
         end
-        states += "<option>#{option}</option>\n"
+        states += "<option value>#{option}</option>\n"
       end
 
       if priority_states
