@@ -1,6 +1,6 @@
 # AuStateSelect
 
-Provides a simple helper to get an HTML select list of Austraila states. Compatable with Rails 3 & 4.
+Provides a simple helper to generate HTML select list of Austraila states. Compatable with Rails 3 & 4.
 
 ## Installation
 
